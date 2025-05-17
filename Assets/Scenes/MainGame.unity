@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 1186142941}
   - component: {fileID: 1186142940}
   m_Layer: 0
-  m_Name: Blah
+  m_Name: Autosave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

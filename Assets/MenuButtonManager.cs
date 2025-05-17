@@ -5,12 +5,12 @@ using PixelCrushers.DialogueSystem;
 
 public class MenuButtonManager : MonoBehaviour
 {
-    public SaveSystem saveSystem;
-
     public void NewGamePressed()
     {
         SaveSystem.LoadScene("MainGame");
         DialogueManager.StartConversation("1episode1action");
+        PlayerPrefs.SetString("conversationName", "1episode1action");
+        PlayerPrefs.SetInt("dialogueID", 21);
     }
     public void ContinuePressed()
     {
