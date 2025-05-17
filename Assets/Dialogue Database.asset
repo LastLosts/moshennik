@@ -1059,7 +1059,7 @@ MonoBehaviour:
   - id: 2
     fields:
     - title: Title
-      value: "1 \u042D\u043F\u0438\u0437\u043E\u0434 1 \u0414\u0435\u0439\u0441\u0442\u0432\u0438\u0435"
+      value: 1episode1action
       type: 0
       typeString: CustomFieldType_Text
     - title: Description
@@ -4088,8 +4088,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 41.695488, y: 424.86353}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 88.557755, y: 126.85628}
+    canvasZoom: 0.6100004
   syncInfo:
     syncActors: 0
     syncItems: 0

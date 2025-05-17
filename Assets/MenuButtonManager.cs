@@ -1,16 +1,29 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using PixelCrushers;
+using PixelCrushers.DialogueSystem;
 
 public class MenuButtonManager : MonoBehaviour
 {
+    public SaveSystem saveSystem;
+
     public void NewGamePressed()
     {
-        Debug.Log("SCENE");
-        SceneManager.LoadScene("MainGame");
+        SaveSystem.LoadScene("MainGame");
+        DialogueManager.StartConversation("1episode1action");
     }
     public void ContinuePressed()
     {
-        SceneManager.LoadScene(1);
+        if (PlayerPrefs.HasKey("conversationName") && PlayerPrefs.HasKey("dialogueID"))
+        {
+            Debug.Log("Loading convesation: " + PlayerPrefs.GetString("conversationName") + PlayerPrefs.GetInt("dialogueID").ToString());
+            SaveSystem.LoadScene("MainGame");
+            DialogueManager.StartConversation(PlayerPrefs.GetString("conversationName"), null, null, PlayerPrefs.GetInt("dialogueID"));
+        }
+        else
+        {
+            Debug.Log("TODO creating emty save");
+        }
     }
     public void SavesPressed()
     {
