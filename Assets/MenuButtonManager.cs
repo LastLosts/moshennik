@@ -5,29 +5,45 @@ using PixelCrushers.DialogueSystem;
 
 public class MenuButtonManager : MonoBehaviour
 {
+    public GameObject mainMenuUI;
+    public GameObject handbookUI;
+
+    private void ResetCyberattacks()
+    {
+        PlayerPrefs.SetInt("p1c1", 0);
+        PlayerPrefs.SetInt("p1c2", 0);
+        PlayerPrefs.SetInt("p1c3", 0);
+        PlayerPrefs.SetInt("p2c1", 0);
+        PlayerPrefs.SetInt("p2c2", 0);
+        PlayerPrefs.SetInt("p2c3", 0);
+        PlayerPrefs.SetInt("p3c1", 0);
+        PlayerPrefs.SetInt("p3c2", 0);
+        PlayerPrefs.SetInt("p3c3", 0);
+    }
+
     public void NewGamePressed()
     {
+        PlayerPrefs.SetString("conversationName", "Prologue");
+        PlayerPrefs.SetInt("dialogueID", -1);
+        ResetCyberattacks();
         SaveSystem.LoadScene("MainGame");
-        DialogueManager.StartConversation("1episode1action");
-        PlayerPrefs.SetString("conversationName", "1episode1action");
-        PlayerPrefs.SetInt("dialogueID", 21);
     }
     public void ContinuePressed()
     {
         if (PlayerPrefs.HasKey("conversationName") && PlayerPrefs.HasKey("dialogueID"))
         {
-            Debug.Log("Loading convesation: " + PlayerPrefs.GetString("conversationName") + PlayerPrefs.GetInt("dialogueID").ToString());
+            Debug.Log("Loading convesation: " + PlayerPrefs.GetString("conversationName") + " ID:" + PlayerPrefs.GetInt("dialogueID").ToString());
             SaveSystem.LoadScene("MainGame");
-            DialogueManager.StartConversation(PlayerPrefs.GetString("conversationName"), null, null, PlayerPrefs.GetInt("dialogueID"));
         }
         else
         {
-            Debug.Log("TODO creating emty save");
+            Debug.Log("TODO hide the button");
         }
     }
-    public void SavesPressed()
+    public void HandbookPressed()
     {
-        // TODO
+        handbookUI.SetActive(true);
+        mainMenuUI.SetActive(false);
     }
     public void SettingsPressed()
     {
