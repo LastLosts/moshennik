@@ -1,15 +1,22 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using PixelCrushers.DialogueSystem;
+using System.Collections;
 
 public class ConversationManager : MonoBehaviour
 {
+    public Texture2D episode1action1texture;
+    public Texture2D episode1action2texture;
+    public Texture2D episode1action3texture;
+
+    public Animator animator;
     public AudioSource audioSource;
     public AudioResource episode1action1;
     public AudioResource episode1action2;
     public AudioResource episode1action3;
 
     private static string _currentConversation;
+    private bool _fading = false;
 
     static public string GetCurrentConversation()
     {
@@ -34,12 +41,14 @@ public class ConversationManager : MonoBehaviour
     {
         if (_currentConversation == "Prologue")
         {
+            DialogueUIManager.ChangeBackground(episode1action1texture);
             _currentConversation = "episode1action1";
             audioSource.resource = episode1action1;
             audioSource.Play();
         }
         else if (_currentConversation == "episode1action1")
         {
+            DialogueUIManager.ChangeBackground(episode1action2texture);
             _currentConversation = "episode1action2";
             audioSource.resource = episode1action2;
             audioSource.Play();
@@ -47,6 +56,7 @@ public class ConversationManager : MonoBehaviour
         }
         else if (_currentConversation == "episode1action2")
         {
+            DialogueUIManager.ChangeBackground(episode1action3texture);
             _currentConversation = "episode1action3";
             audioSource.resource = episode1action3;
             audioSource.Play();
@@ -55,7 +65,9 @@ public class ConversationManager : MonoBehaviour
         else if (_currentConversation == "episode1action3")
         {
             audioSource.Stop();
+            _currentConversation = "NONE";
             PlayerPrefs.SetInt("p3c3", 1);
+            return;
         }
         else
         {
@@ -68,10 +80,20 @@ public class ConversationManager : MonoBehaviour
 
     void Update()
     {
-        if (DialogueManager.currentConversationState == null)
+        if (DialogueManager.currentConversationState == null && !_fading)
         {
-            GetNextConversation();
-            DialogueManager.StartConversation(_currentConversation);
+            _fading = true;
+            StartCoroutine(Fade());
         }
+    }
+    private IEnumerator Fade()
+    {
+        animator.SetTrigger("Show");
+        yield return new WaitForSeconds(0.5f);
+        GetNextConversation();
+        DialogueManager.StartConversation(_currentConversation);
+        yield return new WaitForSeconds(0.8f);
+        animator.SetTrigger("Hide");
+        _fading = false;
     }
 }

@@ -17,10 +17,10 @@ MonoBehaviour:
   description: Helo
   globalUserScript: 
   emphasisSettings:
-  - color: {r: 1, g: 1, b: 1, a: 1}
-    bold: 0
-    italic: 0
-    underline: 0
+  - color: {r: 1, g: 0, b: 0, a: 1}
+    bold: 1
+    italic: 1
+    underline: 1
   - color: {r: 1, g: 0, b: 0, a: 1}
     bold: 0
     italic: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
     - title: Name
       value: "\u041C\u0430\u043A\u0441\u0438\u043C"
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -82,10 +82,9 @@ MonoBehaviour:
   - id: 3
     fields:
     - title: Name
-      value: "\u0421\u043B\u0443\u0436\u0431\u0430 \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438
-        \u0431\u0430\u043D\u043A\u0430"
+      value: "\u0411\u0430\u043D\u043A"
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -4154,8 +4153,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 278.0834}
-    canvasZoom: 0.64000034
+    canvasScrollPosition: {x: 159.82692, y: 0}
+    canvasZoom: 0.7900002
   - id: 4
     fields:
     - title: Title
@@ -5724,8 +5723,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 204.155, y: 296.86725}
-    canvasZoom: 1.06
+    canvasScrollPosition: {x: 386.38135, y: 25.240875}
+    canvasZoom: 0.8200002
   - id: 6
     fields:
     - title: Title
@@ -6929,8 +6928,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 118.57611, y: 158.83673}
-    canvasZoom: 1.03
+    canvasScrollPosition: {x: 254.75601, y: 0}
+    canvasZoom: 0.8800001
   syncInfo:
     syncActors: 0
     syncItems: 0

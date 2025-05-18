@@ -1,10 +1,17 @@
 using UnityEngine;
+using UnityEngine.UI;
 using PixelCrushers;
 using PixelCrushers.DialogueSystem;
 
 public class DialogueUIManager : MonoBehaviour
 {
+    public static RawImage backgroundImage;
     private CustomDialogueUI _ui;
+
+    public static void ChangeBackground(Texture2D texture)
+    {
+        backgroundImage.texture = texture;
+    }
 
     private void GoMainMenu()
     {
@@ -15,6 +22,7 @@ public class DialogueUIManager : MonoBehaviour
 
     private void Start()
     {
+        backgroundImage = GameObject.Find("BG").GetComponent<RawImage>();
         _ui = FindFirstObjectByType<CustomDialogueUI>();
         if (_ui == null)
         {
