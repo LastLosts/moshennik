@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Author: last-lost
+#Moshennik.exe
+#Rating=1-5
+export PW_VULKAN_USE="2"
+export PW_WINE_USE="PROTON_LG"
+export PW_PREFIX_NAME="DEFAULT"
+export FILE_SHA256SUM="e10ea67ccf5e216e0318daf4519f3dd44632d1ca822a4142bffd9c474c481817"

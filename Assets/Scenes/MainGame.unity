@@ -343,34 +343,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 113230, guid: 57901d8399fd6e74fbabbc9956f39557, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 574257923}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57901d8399fd6e74fbabbc9956f39557, type: 3}
---- !u!1 &574257921 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 113230, guid: 57901d8399fd6e74fbabbc9956f39557, type: 3}
-  m_PrefabInstance: {fileID: 574257920}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &574257922 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9596216, guid: 57901d8399fd6e74fbabbc9956f39557, type: 3}
   m_PrefabInstance: {fileID: 574257920}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &574257923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574257921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3da861b39c5f8c32cb68b6469d057b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
 --- !u!1 &595657984
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,50 +487,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!1 &1186142939
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1186142941}
-  - component: {fileID: 1186142940}
-  m_Layer: 0
-  m_Name: Autosave
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1186142940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186142939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29b3efcfc749620c3b186d0917391a13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1186142941
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186142939}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1133.3016, y: 520.06714, z: 0.24129081}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1454958714
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,20 +610,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fef8d6d552a67adca28d7d1c6bba8f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prologuetexture: {fileID: 2800000, guid: 943cfa274b1a3d99ab64633ba9f0977d, type: 3}
   episode1action1texture: {fileID: 2800000, guid: e65c33255753552bb99ebbaf280842e0, type: 3}
   episode1action2texture: {fileID: 2800000, guid: 4319af1fe35db3153a4b40a274783e42, type: 3}
   episode1action3texture: {fileID: 2800000, guid: 9ed68159e6cd7c6e582d596311f4ec99, type: 3}
+  ending1texture: {fileID: 2800000, guid: 943cfa274b1a3d99ab64633ba9f0977d, type: 3}
+  ending2texture: {fileID: 2800000, guid: 943cfa274b1a3d99ab64633ba9f0977d, type: 3}
   animator: {fileID: 574257922}
   audioSource: {fileID: 187809163}
   episode1action1: {fileID: 8300000, guid: 4dce273e200ed19ab91a7f34d60dbd09, type: 3}
   episode1action2: {fileID: 8300000, guid: eea9bb4eb8b60e2a5bff7ec5c3411f21, type: 3}
   episode1action3: {fileID: 8300000, guid: 66095aa2a8a18bb8f9047c8ef09fd027, type: 3}
+  ending1audio: {fileID: 8300000, guid: f2331dc3fec4dd8ce9e2edecb9691ed5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 595657987}
-  - {fileID: 1186142941}
   - {fileID: 1687844240}
   - {fileID: 187809164}
   - {fileID: 574257920}
